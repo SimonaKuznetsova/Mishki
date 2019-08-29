@@ -1,94 +1,90 @@
-body{
-    min-width: 320px;
-    margin: 0;
-    padding: 0;
+body {
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
 
-    font-size: 17px;
-    line-height: 20px;
-    color: #000000;
-    font-family: 'OpenSans', sans-serif;
+  font-size: 17px;
+  line-height: 20px;
+  color: #000000;
+  font-family: "OpenSans", sans-serif;
 
-    background-color: #ffffff;
+  background-color: #ffffff;
 }
 
 //Миксины
 
-.reset-list(){
-    margin: 0;
-    padding: 0;
+.reset-list() {
+  margin: 0;
+  padding: 0;
 }
 
 //Конец миксинов
 
-
-img{
-    max-width: 100%;
-    height: auto;
+img {
+  max-width: 100%;
+  height: auto;
 }
 
-.page-header{
-    display: flex;
-    flex-direction: column;
+.page-header {
+  display: flex;
+  flex-direction: column;
 }
 
-.page-header__logo{
-    height: 80px;
+.page-header__logo {
+  height: 80px;
 }
 
-
-.site-list__item{
-    border-top: 1px solid #ececec;
-    margin: 30px auto;
+.site-list__item {
+  border-top: 1px solid #ececec;
+  margin: 30px auto;
 }
-.site-list__item a{
-    text-decoration: none;
-    color: #000000;
-}
-
-@media (min-width: 768px){
-    .page-header__logo{
-        order: 2;
-        height: 90px;
-    }
+.site-list__item a {
+  text-decoration: none;
+  color: #000000;
 }
 
-
-.main-nav__list{
-    .reset-list();
-
-    list-style: none;
+@media (min-width: 768px) {
+  .page-header__logo {
+    order: 2;
+    height: 90px;
+  }
 }
 
-.main-nav{
+.main-nav__list {
+  .reset-list();
+
+  list-style: none;
+}
+
+.main-nav {
+  margin: 0 auto;
+  width: 320px;
+}
+
+@media (min-width: 768px) {
+  .main-nav {
+    width: auto;
+    margin: 0;
+  }
+
+  .main-nav__wrapper {
+    width: 668px;
     margin: 0 auto;
-    width: 320px;
+  }
 }
 
-@media (min-width: 768px){
-    .main-nav{
-        width: auto;
-        margin: 0;
-    }
+@media (min-width: 1250px) {
+  .page-header {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  .main-nav {
+    width: auto;
+    margin: 0;
+  }
 
-    .main-nav__wrapper{
-        width: 668px;
-        margin: 0 auto;
-    }
-
-}
-
-@media (min-width: 1250px){
-    .page-header{
-        justify-content: space-between;
-        flex-direction: row;
-    }
-    .main-nav{
-        width: auto;
-        margin: 0;
-    }
-
-    .main-nav__list{
-        display: flex;
-        justify-content: space-between;
-    }
+  .main-nav__list {
+    display: flex;
+    justify-content: space-between;
+  }
 }
