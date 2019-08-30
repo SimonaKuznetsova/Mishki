@@ -13,30 +13,34 @@
             <img class='page-header__logo-image' src='img/mishka-logo-mobile.png' width='86' height='35' alt='Магазин 'Mishka''>
         </a>
 
-<!--����� �����������-->
         <nav class='main-nav'>
-            <button class='main-nav__toggle' type='button'>Открыть меню</button>
+            <!--<button class='main-nav__toggle' type='button'>Открыть меню</button>-->
 
 
             <div class='main-nav__wrapper'>
                 <ul class='main-nav__list site-list'>
-                    <li class='site-list__item'>
-                        <a href='catalog.html'>Каталог товаров</a>
-                    </li>
-                    <li class='site-list__item'>
-                        <a href='order.html'>Вязание на заказ</a>
-                    </li>
-                    <li class='site-list__item'>
-                        <a href='searsh.html' >
-                            <img class='site-list__item_icon' src='img/search.svg' width='18' height='18' alt='Поиск'>
+                    <a href='catalog.html' class='site-list__item'>
+                        <li>
+                            Каталог товаров
+                        </li>
+                    </a>
+                    <a href='order.html' class='site-list__item'>
+                        <li>
+                            Вязание на заказ
+                        </li>
+                    </a>
+                    <a href='searsh.html' class='site-list__item'>
+                        <img class='site-list__item_icon' src='img/search.png' width='18' height='18' alt='Поиск'>
+                        <li>
                             Поиск по сайту
-                        </a>
-                    </li>
-                    <li class='site-list__item'>
-                        <a href='basket.html'>
-                            <img class='site-list__item_icon' src='img/cart.svg' width='22' height='18' alt='Корзина'>
-                            Корзина: пока пуста</a>
-                    </li>
+                        </li>
+                    </a>
+                    <a href='basket.html' class='site-list__item'>
+                        <img class='site-list__item_icon' src='img/cart.png' width='22' height='18' alt='Корзина'>
+                        <li>
+                            Корзина: пока пуста
+                        </li>
+                    </a>
                 </ul>
             </div>
         </nav>
@@ -44,26 +48,29 @@
 
 
     <main class='page-main'>
-        <h1 class='page-main__title'>Милые штуки ручной работы для дома</h1>
+        <div class='title-wrapper'
+            <h1 class='page-main__title'>Милые штуки ручной работы для дома</h1>
+        </div>
 
 
         <section class='categories'>
-            <ul class='categories-list'>
-                <li class='categories-list__item categories-list__item_interior'>
-                    <a href='interier.html'>
+            <ul class='categories-list site-list'>
+                <a href='interier.html' class='categories-list__item categories-list__item_interior' >
+                    <li>
                         <img class='categories-list__item_icon' src='img/interior.svg' width="40" height="62" alt='Интерьер'>
                         Предметы интерьера
-                    </a>
-                </li>
-                <li class='categories-list__item categories-list__item_toy'>
-                    <a href='toys.html'>
+                    </li>
+                </a>
+                <a href='toys.html' class='categories-list__item categories-list__item_toy'>
+                    <li>
                         <img class='categories-list__item_icon' src='img/toy.svg' width="60" height="60" alt='Игрушки'>
                         Детские игрушки
-                    </a>
-                </li>
+                    </li>
+                </a>
             </ul>
         </section>       
     </main>
+
 
     <section class='product product-of-the-week'>
         <b class='product__name'>Вязаные корзинки</b>
@@ -96,21 +103,22 @@
                 <td class='product__value'>15 см</td>
             </tr>
         </table>
+        <div class='product-wrapper'>
+            <img class='product__image' src='img/triple-set-mobile.png' width='260' height='315' alt='Три корзинки'>
+            <br>
 
-        <img class='product__image' src='img/triple-set-mobile.png' width='260' height='315' alt='Три корзинки'>
+            <span class='product__price'>Цена: 990 руб.</span>
+            <br>
 
 
-        <span class='product__price'>Цена: 990 руб.</span>
-        <br>
-
-
-        <button class='product_button button' type="button">Заказать</button>
+            <button class='product_button button' type="button">Заказать</button>
+        </div>
     </section>
 
 
     <section class='about-us'>
         <div class='about-us__advantages'>
-            <ul class='advantages-list'>
+            <ul class='advantages-list site-list'>
                 <li class='advantages-list__item'>
                     <img class='advantages-icon' src='img/icon-1.svg' width="32" height="37" alt='Экология'>
                     Экологически чистые материалы

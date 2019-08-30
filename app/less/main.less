@@ -1,29 +1,24 @@
+@font-face{
+    font-family: 'OpenSans';
+    src: url('opensanslight.woff') format('woff'),
+         url('opensanslight.woff2') format('woff2');
+}
+
+@font-face{
+    font-family: 'OpenSans-2';
+    src: url('opensans.woff') format('woff'),
+         url('opensans.woff2') format('woff2');
+}
+
 body{
     min-width: 320px;
     margin: 0;
     padding: 0;
 
     font-size: 17px;
-    line-height: 20px;
-    color: #000000;
+    line-height: 24px;
     font-family: 'OpenSans', sans-serif;
-
-    background-color: #ffffff;
-}
-
-//Миксины
-
-.reset-list(){
-    margin: 0;
-    padding: 0;
-}
-
-//Конец миксинов
-
-
-img{
-    max-width: 100%;
-    height: auto;
+    color: #000000;
 }
 
 .page-header{
@@ -32,63 +27,51 @@ img{
 }
 
 .page-header__logo{
-    height: 80px;
-}
-
-
-.site-list__item{
-    border-top: 1px solid #ececec;
-    margin: 30px auto;
-}
-.site-list__item a{
-    text-decoration: none;
-    color: #000000;
-}
-
-@media (min-width: 768px){
-    .page-header__logo{
-        order: 2;
-        height: 90px;
-    }
+    
+    height: 35px;
 }
 
 
 .main-nav__list{
-    .reset-list();
+    margin: 0;
+    padding: 0;
 
     list-style: none;
 }
 
-.main-nav{
-    margin: 0 auto;
+.main-nav,
+.page-header__logo,
+.title-wrapper,
+.categories,
+.product__specifications,
+.product-wrapper,
+.button,
+{
     width: 320px;
+    margin: 0 auto;
 }
 
-@media (min-width: 768px){
-    .main-nav{
-        width: auto;
-        margin: 0;
-    }
 
-    .main-nav__wrapper{
-        width: 668px;
-        margin: 0 auto;
-    }
-
+/*
+.title-wrapper{
+    padding-top: 70px;
+    padding-right: 38px;
+    padding-left: 38px;
+    padding-bottom: 120px;
+    background: #fafafa url('../img/hero-mobile.png') no-repeat;
+    height: 115px;
 }
 
-@media (min-width: 1250px){
-    .page-header{
-        justify-content: space-between;
-        flex-direction: row;
-    }
-    .main-nav{
-        width: auto;
-        margin: 0;
-    }
+.categories-list{
+    width: 100%;
+    margin: 0;
+    padding: 0;
 
-    .main-nav__list{
-        display: flex;
-        justify-content: space-between;
-    }
+    list-style: none;
 }
+
+
+.categories-list__item{
+    display: flex;
+    justify-content: space-between;
+}*/

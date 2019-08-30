@@ -1,0 +1,97 @@
+@font-face{
+    font-family: 'OpenSans';
+    src: url('opensanslight.woff') format('woff'),
+         url('opensanslight.woff2') format('woff2');
+}
+
+@font-face{
+    font-family: 'OpenSans-2';
+    src: url('opensans.woff') format('woff'),
+         url('opensans.woff2') format('woff2');
+}
+
+
+body{
+    margin: 0;
+    padding: 20px 0 0 0;
+
+    font-size: 17px;
+    line-height: 24px;
+    font-family: 'OpenSans', sans-serif;
+    color: #000000;
+
+    min-width: 320px;
+
+    .flex-center;
+}
+
+
+//Примеси
+.flex-center{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+
+.horizontal-paddings{
+    padding: 0 30px;
+}
+//Конец примесей
+
+
+a{
+    text-decoration: none;
+    color: #000000;
+}
+
+
+.page-header{
+    .flex-center;
+    width: 100%;
+  }
+
+.main-nav{
+    width: 320px;
+    margin: 0 auto;
+}
+
+.site-list{
+    list-style: none;
+    padding: 0;
+}
+
+
+.site-list__item{
+    border-top: 1px solid #ececec;
+    padding: 31px 0;
+    width: 100%;
+       
+    display: flex;
+
+    font-weight: bold;
+}
+
+.site-list__item:last-child{
+    border-bottom: 1px solid #ececec;
+}
+
+.page-header__logo{
+    margin-bottom: 22px;
+    width: 100%;
+}
+
+.page-header__logo-image{
+    margin: 0 50%;
+}
+
+.site-list__item li{
+
+}
+
+.site-list__item_icon{
+    margin-left: 30px;
+    margin-right: 25px;
+}
+
+
