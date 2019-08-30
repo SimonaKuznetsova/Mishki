@@ -1,39 +1,41 @@
-var gulp = require('gulp');
-var less = require('gulp-less');
-var browserSync = require('browser-sync'); 
+var gulp = require("gulp");
+var less = require("gulp-less");
+var browserSync = require("browser-sync").create();
 
-/*gulp.task('myTask', function(){
-    return gulp.src('source-files')
-    .pipe(plugin())
-    .pipe(gulp.dest('folder'))
-}) */
-
-gulp.task('less', function(){
-    return gulp.src('app/less/main.less')
+const compileLess = () =>
+  gulp
+    .src("app/less/main.less")
     .pipe(less())
-    .pipe(gulp.dest('app/css'))
-    .pipe(browserSync.reload({
+    .pipe(gulp.dest("app/css"))
+    .pipe(
+      browserSync.reload({
         stream: true
-    }))
-})
+      })
+    );
 
+const watchHtml = () =>
+  gulp.src("app/**/*.html").pipe(
+    browserSync.reload({
+      stream: true
+    })
+  );
 
+const init = () => {
+  // Server initialization
+  browserSync.init({
+    server: {
+      baseDir: "./app"
+    },
+    notify: false
+  });
 
-gulp.task('watch', function(){
-  gulp.watch('app/less/**/*.less', ['less']) 
-  // другие ресурсы
-})
+  // Watches changes in HTML files and refreshes
+  // them with BrowserSync if something was changed
+  gulp.watch("app/**/*.html", watchHtml);
 
-gulp.task('browser-sync', function(){
-    browserSync({
-        server: {
-            baseDir: "app",
-            index: 'app/index.html',
-            directory: true
-            },
+  // Watches Less => compiles Less to CSS => Refreshes changes in browser
+  gulp.watch("app/less/**/*.less", compileLess);
+};
 
-            notify: false
-    });
-})
-
-
+// Default(initital) task for Gulp
+exports.default = gulp.series(compileLess, init);
