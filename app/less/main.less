@@ -21,7 +21,8 @@ html,body{
     color: #000000;
 }
 
-.page-header{
+.page-header,
+.page-main{
     display: flex;
     flex-direction: column;
 }
@@ -133,12 +134,25 @@ html,body{
 }
 
 
-
+.site-list__item:first-of-type a{
+    border-top: 1px solid #ececec;
+}
 
 
 .site-list__item_icon{
     position: absolute;
     top: 35px;
     left: 30px;
+}
+
+
+
+.page-main__title-wrapper{
+    width: 320px;
+    margin: 0 auto;
+
+    height: 283px;
+    background-image: url('/img/hero-mobile.png');
+    background-repeat: no-repeat;
 }
 
