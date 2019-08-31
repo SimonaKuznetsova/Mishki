@@ -1,10 +1,10 @@
 @font-face {
-  font-family: 'OpenSans';
-  src: url('opensanslight.woff') format('woff'), url('opensanslight.woff2') format('woff2');
+  font-family: "OpenSans";
+  src: url("opensanslight.woff") format("woff"), url("opensanslight.woff2") format("woff2");
 }
 @font-face {
-  font-family: 'OpenSans-2';
-  src: url('opensans.woff') format('woff'), url('opensans.woff2') format('woff2');
+  font-family: "OpenSans-2";
+  src: url("opensans.woff") format("woff"), url("opensans.woff2") format("woff2");
 }
 html,
 body {
@@ -13,25 +13,31 @@ body {
   padding: 0;
   font-size: 17px;
   line-height: 24px;
-  font-family: 'OpenSans', sans-serif;
+  font-family: "OpenSans", sans-serif;
   color: #000000;
+}
+ul {
+  margin: 0;
+  padding: 0;
 }
 .page-header,
 .page-main {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .page-header__logo {
+  display: block;
   text-align: center;
-  width: 320px;
-  height: 79px;
-  padding-top: 22px;
+  margin: 22px 0;
+}
+.page-header__logo img {
+  display: block;
 }
 .main-nav {
   position: relative;
-  top: -30px;
-  right: 35px;
-  width: 320px;
+  width: 100%;
+  max-width: 320px;
   margin: 0 auto;
 }
 .page-header__logo,
@@ -40,9 +46,6 @@ body {
 .product__specifications,
 .product-wrapper,
 .button {
-  width: 100%;
-  max-width: 320px;
-  margin: 0 auto;
   text-align: center;
 }
 .visually-hidden:not(:focus):not(:active) {
@@ -74,7 +77,7 @@ body {
   background-color: #946e6e;
 }
 .main-nav__closed .main-nav__toggle::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 20px;
   height: 2px;
@@ -91,7 +94,7 @@ body {
   padding: 32px 77px;
   font-size: 17px;
   line-height: 24px;
-  font-family: 'OpenSans', sans-serif;
+  font-family: "OpenSans", sans-serif;
   font-weight: bold;
   text-decoration: none;
   color: black;
@@ -107,9 +110,11 @@ body {
   left: 30px;
 }
 .page-main__title-wrapper {
-  width: 320px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
   margin: 0 auto;
   height: 283px;
-  background-image: url('/img/hero-mobile.png');
+  background-image: url("/img/hero-mobile.png");
   background-repeat: no-repeat;
 }
