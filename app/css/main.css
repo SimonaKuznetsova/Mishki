@@ -6,6 +6,7 @@
   font-family: 'OpenSans-2';
   src: url('opensans.woff') format('woff'), url('opensans.woff2') format('woff2');
 }
+html,
 body {
   min-width: 320px;
   margin: 0;
@@ -20,43 +21,91 @@ body {
   flex-direction: column;
 }
 .page-header__logo {
-  height: 35px;
+  text-align: center;
+  width: 320px;
+  height: 79px;
+  padding-top: 22px;
 }
-.main-nav__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+.main-nav {
+  position: relative;
+  top: -30px;
+  right: 35px;
+  width: 320px;
+  margin: 0 auto;
 }
-.main-nav,
 .page-header__logo,
 .title-wrapper,
 .categories,
 .product__specifications,
 .product-wrapper,
 .button {
-  width: 320px;
+  width: 100%;
+  max-width: 320px;
   margin: 0 auto;
+  text-align: center;
 }
-/*
-.title-wrapper{
-    padding-top: 70px;
-    padding-right: 38px;
-    padding-left: 38px;
-    padding-bottom: 120px;
-    background: #fafafa url('../img/hero-mobile.png') no-repeat;
-    height: 115px;
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
-
-.categories-list{
-    width: 100%;
-    margin: 0;
-    padding: 0;
-
-    list-style: none;
+.main-nav__toggle {
+  position: absolute;
+  top: -105px;
+  right: 40px;
+  z-index: 2;
+  display: block;
+  width: 23px;
+  height: 23px;
+  background-color: white;
+  border: none;
+  background-repeat: no-repeat;
+  cursor: pointer;
 }
-
-
-.categories-list__item{
-    display: flex;
-    justify-content: space-between;
+.main-nav__toggle:hover,
+.main-nav__toggle:active {
+  background-color: #946e6e;
+}
+.main-nav__closed .main-nav__toggle::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background-color: #000000;
+  box-shadow: 0 6px 0 0 #000000, 0 12px 0 0 #000000;
+}
+.site-list {
+  width: 100%;
+  list-style: none;
+}
+.site-list a {
+  width: 100%;
+  display: block;
+  font-size: 17px;
+  line-height: 24px;
+  font-family: 'OpenSans', sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  white-space: nowrap;
+  padding: 32px 70px;
+  border-top: 1px solid #ececec;
+  list-style: none;
+}
+.site-list a:last-of-type {
+  border-bottom: 1px solid #ececec;
+}
+/*.site-list__item_icon{
+    position: relative;
+    top: -22px;
+    right: 35px;
 }*/
+.site-list li {
+  max-height: 79px;
+}
