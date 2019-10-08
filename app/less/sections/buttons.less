@@ -1,0 +1,143 @@
+.button{
+        display: block;
+        width: 260px;
+        margin: 0 auto;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        box-sizing: border-box;
+        border: 2px solid #444444;
+
+        background-color: #ffffff;
+        text-align: center;
+
+        font-family: 'OpenSans-2', sans-serif;
+        font-size: 17px;
+        line-height: 20px;
+        color: #444444;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+.button:hover{
+    color: white;
+    border: none;
+    background-color: #444444;
+    border: 2px solid #444444;
+}
+
+.button:active{
+    color: #797979;
+}
+.product__description-wrapper-two{
+    button{
+        width: 292px;
+        margin-right: 40px;
+    }
+}
+
+.slider__buttons{
+    display: flex;
+    justify-content: center;
+
+    margin-top: 36px;
+}
+.slider__button{
+    width: 130px;
+    border: 1px solid #ececec;
+    background-color: #ffffff;
+
+    font-size: 0px;
+
+    padding: 13px 38px;
+}
+
+.slider__button_next{
+    border-left: none;
+
+    img{
+    transform: rotate(180deg);
+    }
+}
+
+.reviews__button{
+    margin-top: 40px;
+}
+
+.process__button{
+    width: 190px;
+}
+
+@media (min-width: 768px){
+    .reviews__button{
+        width: 176px;
+        position: absolute;
+
+        top: 2185px;
+        right: 50px;
+    }
+
+    .slider__button{
+        border: none;
+        padding: 13px 10px;
+
+        width: 80px;
+    }
+
+   .slider__buttons{
+        position: absolute;
+        top: 2450px;
+        right: 60px;
+
+    }
+
+    .contacts__button{
+        width: 230px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        margin-top: 56px;
+        margin-bottom: 56px;
+    }
+
+    .process__button{
+        margin-bottom: 45px;
+        width: 584px;
+    }
+
+    .order__button{
+        margin: 0;
+        width: 230px;
+    }
+}
+
+@media (min-width: 1200px){
+    .reviews__button{
+        top: 2385px;
+        right: 100px;
+    }
+
+    .slider__buttons{
+        top: 2685px;
+        right: 110px;
+    }
+
+    .contacts__button{
+        margin: 0;
+        margin-left: 175px;
+
+        width: 230px;
+        margin-bottom: 106px;
+        margin-top: 48px;
+    }
+
+    .process__button{
+        width: 230px;
+        padding-top: 17px;
+        padding-bottom: 15px;
+    }
+
+    .order__button{
+        margin:  0;
+        margin-left: 111px;
+    }
+
+}

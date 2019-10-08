@@ -1,0 +1,48 @@
+.catalog-title{
+    width: 100%;
+    min-width: 1200px;
+    height: 150px;
+    background-color: #f1f1f1;
+    padding-top: 101px;
+
+
+
+    .catalog-title__text{
+        margin: 0;
+
+        font-size: 53px;
+        font-family: 'OpenSans', sans-serif;
+        text-align: center;
+
+
+    }
+}
+
+@media (max-width: 1199px){
+    .catalog-title{
+        min-width: 768px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 0;
+        height: 214px;
+    }
+
+    .catalog-title__text{
+        font-size: 53px;
+    }
+    
+}
+
+@media (max-width: 767px){
+    .catalog-title{
+        min-width: 320px;
+        height: 175px;
+
+        .catalog-title__text{
+            font-size: 27px;
+        }
+    }
+
+}
